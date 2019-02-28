@@ -76,7 +76,7 @@ class ComicListCell extends StatelessWidget {
           width: 400.0,
           height: 0.5,
           color: Theme.of(context).accentColor,
-          margin: const EdgeInsets.all(4.0),
+          margin: const EdgeInsets.all(0.0),
         )
 
       ],

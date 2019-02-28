@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'comic_cell.dart';
 import 'comic_detail.dart';
-//import 'mock_data.dart';
+import 'mock_data.dart';
 
 class ComicsList extends StatefulWidget {
   @override
@@ -20,8 +20,8 @@ class ComicsListState extends State<ComicsList> {
 
   void getComicData() async {
 
-    var data = await getJson();
-    //var data = json.decode(new Mocki().mockData.toString());
+    //var data = await getJson();
+    var data = json.decode(new Mocki().mockData.toString());
 
     setState(() {
       comicList = data['data']['results'];
@@ -83,8 +83,8 @@ class ComicsListState extends State<ComicsList> {
 }
 
 Future<Map> getJson() async {
-  var apiKey = '[Your public key here]';
-  var privAPIKey = '[Your private Key here]';
+  var apiKey = '49837e5ff6d0be3ab67acb1fbab2ea83';
+  var privAPIKey = '67d48db7ddeeba055906bb0afc85e0731a07254f';
   var baseUrl = 'https://gateway.marvel.com:443/v1/public/series/20432/comics?orderBy=-issueNumber';
 
   var timeStamp = new DateTime.now().millisecondsSinceEpoch.toString();
